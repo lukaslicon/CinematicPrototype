@@ -6,11 +6,12 @@ class load extends Phaser.Scene {
     {
         this.load.path = 'assets/images/';
         this.load.image('background', 'map.png');
+        this.load.image('player', 'PixelArtCharacter.png');
 
     }
     create()
     {
-        this.scene.start('MiniGame');
+        this.scene.start('intro');
     }
 }
 
