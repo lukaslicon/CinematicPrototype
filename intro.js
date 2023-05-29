@@ -22,7 +22,7 @@ class intro extends Phaser.Scene {
             this.targetX = pointer.x;
             this.targetY = pointer.y;
         });
-
+        
         //score
         this.add.text(100, 92, 'NPC MESSAGES: ').setStyle({ fontSize: 50, color: '#fff' })
         this.messageCount = this.add.text(500, 93).setStyle({ fontSize: 50, color: '#fff' })
