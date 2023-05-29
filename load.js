@@ -7,6 +7,7 @@ class load extends Phaser.Scene {
         this.load.path = 'assets/images/';
         this.load.image('background', 'map.png');
         this.load.image('player', 'PixelArtCharacter.png');
+        this.load.image('NPC', 'PixelArtNPC.png');
 
     }
     create()
