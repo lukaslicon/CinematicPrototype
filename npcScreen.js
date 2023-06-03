@@ -84,7 +84,7 @@ class npcScreen extends Phaser.Scene {
                 // Fade out and transition to another scene
                 this.cameras.main.fadeOut(1000, 0, 0, 0, (camera, progress) => {
                     if (progress === 1) {
-                        this.scene.start('intro');
+                        this.scene.start('outro');
                     }
                 });
             }, [], this);
