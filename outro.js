@@ -5,6 +5,8 @@ class outro extends Phaser.Scene {
 
     create() {
 
-        
+        this.input.on('pointerdown', () => {
+            this.scene.start('intro')
+        });
     }
 }
