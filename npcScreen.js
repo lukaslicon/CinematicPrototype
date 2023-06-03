@@ -74,13 +74,19 @@ class npcScreen extends Phaser.Scene {
                 this.message3.destroy();
             }, [], this);
         }
-        if(this.NPCmessage == 4){
+        if (this.NPCmessage == 4) {
             // Create the "HELLO" message
             this.message4 = this.add.text(this.cameras.main.centerX, this.cameras.main.centerY, 'STORY MESSAGE 4', { fontSize: '64px', fill: '#fff' }).setOrigin(0.5);
-            
+    
             // Use a timed event to remove the "HELLO" message after 5 seconds
-            this.time.delayedCall(5000, () => {
+            this.time.delayedCall(1000, () => {
                 this.message4.destroy();
+                // Fade out and transition to another scene
+                this.cameras.main.fadeOut(1000, 0, 0, 0, (camera, progress) => {
+                    if (progress === 1) {
+                        this.scene.start('intro');
+                    }
+                });
             }, [], this);
         }
     }
